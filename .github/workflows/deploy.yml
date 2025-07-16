@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t chari9515/nonstop-music:latest .
+        run: docker build -t chari9515/nonstop-music:latest ./backend
 
       - name: Push Docker image to Docker Hub
         run: docker push chari9515/nonstop-music:latest
